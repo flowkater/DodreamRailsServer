@@ -1,0 +1,10 @@
+h1 New comment
+
+= form_for [@goal_post,@comment] do |f|
+  .field
+    = f.label :content
+    = f.text_field :content
+
+  .actions = f.submit 'Save'
+
+/ # = link_to 'Back', goal_goal_post_comments_path

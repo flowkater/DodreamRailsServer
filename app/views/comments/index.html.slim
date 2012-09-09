@@ -1,0 +1,21 @@
+h1 Listing comments
+
+table
+  tr
+    th Content
+    th Goal post
+    th
+    th
+    th
+
+  - @comments.each do |comment|
+    tr
+      td = comment.content
+      td = comment.goal_post.id
+      td = link_to 'Show', resource_url(comment)
+      td = link_to 'Edit', edit_resource_url(comment)
+      td = link_to 'Destroy', resource_path(comment), :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Comment', new_resource_url

@@ -1,0 +1,23 @@
+h1 Listing goal_posts
+
+table
+  tr
+    th Summary
+    th Tgoal
+    th Goal
+    th
+    th
+    th
+
+  - @goal_posts.each do |goal_post|
+    tr
+      td = goal_post.summary
+      td = goal_post.tgoal
+      td = goal_post.goal.id
+      td = link_to 'Show', resource_url(goal_post)
+      td = link_to 'Edit', edit_resource_url(goal_post)
+      td = link_to 'Destroy', resource_path(goal_post), :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Goal post', new_resource_url

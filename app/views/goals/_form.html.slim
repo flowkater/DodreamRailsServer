@@ -1,0 +1,14 @@
+= form_for @goal do |f|
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :statement
+    = f.text_area :statement
+  .field
+    = f.label :startdate
+    = f.date_select :startdate
+  .field
+    = f.label :enddate
+    = f.date_select :enddate
+  .actions = f.submit 'Save'

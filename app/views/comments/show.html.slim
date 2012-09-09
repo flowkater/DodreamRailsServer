@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Content:
+  = @comment.content
+p
+  strong Goal post:
+  = @comment.goal_post
+
+= link_to 'Edit', edit_resource_url(@comment)
+'|
+= link_to 'Back', comments_path

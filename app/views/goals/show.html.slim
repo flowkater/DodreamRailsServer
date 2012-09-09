@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @goal.name
+p
+  strong Statement:
+  = @goal.statement
+p
+  strong Startdate:
+  = @goal.startdate
+p
+  strong Enddate:
+  = @goal.enddate
+p
+ 	strong User:
+ 	= @goal.user.id
+br
+br
+br
+= link_to '인증샷올리기', goal_goal_posts_path(@goal)
+br
+br
+
+= link_to 'Edit', edit_goal_path(@goal)
+'|
+= link_to 'Back', goals_path

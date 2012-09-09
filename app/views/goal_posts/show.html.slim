@@ -1,0 +1,23 @@
+p#notice = notice
+
+p
+  strong Summary:
+  = @goal_post.summary
+p
+  strong Tgoal:
+  = @goal_post.tgoal
+p
+  strong Goal:
+  = @goal_post.goal.name
+p
+  strong Image:
+  - @goal_post.pictures.each do |picture|
+    = image_tag picture.image_url(:thumb)
+br
+br
+= link_to '코멘트 달기', goal_post_comments_path(@goal_post)
+br
+br
+= link_to 'Edit', edit_resource_url(@goal_post)
+'|
+= link_to 'Back', goal_goal_posts_path
