@@ -34,6 +34,7 @@ group :development do
 end
 
 group :production do
+	gem 'mysql2'
 end
 
 gem 'jquery-rails'
@@ -47,10 +48,10 @@ gem 'ransack'
 gem 'warden'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
